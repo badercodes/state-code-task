@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+## CODED - React State - Code Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1 - To get started - navigate to the project directory from your terminal/command line interface and type the following command : `npm start`
 
-## Available Scripts
+2 - Open VS Code or your favorite code editor and then open the entire directory as a project folder
 
-In the project directory, you can run:
+3 - Navigate to the `src` directory and locate the `App.js` file.
 
-### `npm start`
+4 - Open the `App.js` file and examine and class based component `MyWorkout` which starts on line 14.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5 - Take a look at the state variable declaration on line 15 - and note that state is an OBJECT that contains 2 variables `pushups` and `situps`. These 2 variables have a limited scope within this `class`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6 - On line 29 notice how the state object is updated using `setState` and a new object is passed with the updated entry. (not this doesn't replace all other variables - it is NOT an assignment operator)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7 - On line 48 `setState` is passed a callback function instead of an object - this is the PREFERRED method for updating state - especially when there are multiple `setState` calls. That is because React may batch `setState` calls all together if they're passed in as object, however, passing in a callback makes sure that it the `setState` call is done and the App is "refreshed" before contintuing.
