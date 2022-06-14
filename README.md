@@ -29,7 +29,11 @@ The current workout tracker App has 2 excercise, pushup and lunges. Let's add a 
 Although defining `state` as we did in line 15 is valid, there's an alternative way to define state within a class constructor. It is important to know how to define `state` in both ways, as you may work with code that uses class constructors.
 
 1. Create a constructor right after the class declaration.
+
 2. The constructor needs to take `props` as an argument.
+
 3. Within the constructor call `super(props)` passing it the props argument.
+
 4. Declare your state using this keyword `this.state` and set it equal to the state object we had in line 15.
+
 5. Make sure to delete the `state` declaration in line 15 as we are now initializing the `state` in the constructor.
