@@ -1,4 +1,4 @@
-## CODED - React State - Code Demo
+## CODED - React State - Code Task
 
 1 - To get started - navigate to the project directory from your terminal/command line interface and type the following command : `npm start`
 
