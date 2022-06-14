@@ -37,3 +37,7 @@ Although defining `state` as we did in line 15 is valid, there's an alternative 
 4. Declare your state using this keyword `this.state` and set it equal to the state object we had in line 15.
 
 5. Make sure to delete the `state` declaration in line 15 as we are now initializing the `state` in the constructor.
+
+## CHALLENGE - Code Refactoring.
+
+One of the core advantages of React is component reusability. Furthermore, it is considered good programming practice to NOT repeat code that you need. In our code, we currenlty have 3 excercises that repeat the same code with minor difference for excercises. Imagine we had to add anohter 10 excercises. This would get messy really fast. Let's attempt to create a reusable component for each excercise and make our code more scalable.
