@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import pushupImg from "./images/pushup.jpeg";
 import situpImg from "./images/situp.jpeg";
+import lungesImg from "./images/lunges.jpeg";
 
 function App() {
   return (
